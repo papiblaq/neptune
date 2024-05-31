@@ -51,7 +51,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Cyan;
+            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(-3, 1);
             this.panel2.Name = "panel2";
@@ -69,7 +69,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Azure;
+            this.panel1.BackColor = System.Drawing.Color.Cyan;
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.btn_forgotten);
             this.panel1.Controls.Add(this.login_register);
@@ -198,6 +198,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(818, 497);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "sighnin";

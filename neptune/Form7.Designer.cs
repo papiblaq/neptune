@@ -31,54 +31,44 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelDropDown = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.panelDropDown.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panelDropDown.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Cyan;
+            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel2.Controls.Add(this.flowLayoutPanel1);
             this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(240, 641);
             this.panel2.TabIndex = 7;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // button9
-            // 
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(694, 10);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(50, 35);
-            this.button9.TabIndex = 12;
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -91,105 +81,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(222, 429);
             this.flowLayoutPanel1.TabIndex = 14;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.SeaShell;
-            this.button7.Location = new System.Drawing.Point(3, 48);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(214, 41);
-            this.button7.TabIndex = 12;
-            this.button7.Text = "Temporary fund investments";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.SeaShell;
-            this.button6.Location = new System.Drawing.Point(3, 95);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(214, 41);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "loan intrests and charges";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.SeaShell;
-            this.button8.Location = new System.Drawing.Point(3, 142);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(214, 41);
-            this.button8.TabIndex = 13;
-            this.button8.Text = "Fund Supervision";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(236, 32);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(308, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 20);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Loan Intrest And Charges";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 15;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(694, 51);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(750, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 20);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "welcome Admin";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Azure;
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(240, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(906, 641);
-            this.panel1.TabIndex = 8;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(24, 7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(113, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
             // 
             // panelDropDown
             // 
@@ -267,6 +158,39 @@
             this.button13.UseVisualStyleBackColor = false;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.SeaShell;
+            this.button7.Location = new System.Drawing.Point(3, 48);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(214, 41);
+            this.button7.TabIndex = 12;
+            this.button7.Text = "Temporary fund investments";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.SeaShell;
+            this.button6.Location = new System.Drawing.Point(3, 95);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(214, 41);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "loan intrests and charges";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.SeaShell;
+            this.button8.Location = new System.Drawing.Point(3, 142);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(214, 41);
+            this.button8.TabIndex = 13;
+            this.button8.Text = "Fund Supervision";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // button12
             // 
             this.button12.BackColor = System.Drawing.Color.SeaShell;
@@ -278,6 +202,70 @@
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(236, 32);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button9
+            // 
+            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
+            this.button9.Location = new System.Drawing.Point(841, 15);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(39, 35);
+            this.button9.TabIndex = 12;
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(332, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(224, 20);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Loan Intrest And Charges";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 15;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(15, 50);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 10;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Cyan;
+            this.panel1.Controls.Add(this.button9);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(240, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(906, 641);
+            this.panel1.TabIndex = 8;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(24, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(113, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -285,17 +273,21 @@
             this.ClientSize = new System.Drawing.Size(1146, 641);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1164, 688);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1164, 688);
             this.Name = "Form7";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form7";
             this.Load += new System.EventHandler(this.Form7_Load);
             this.panel2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.panelDropDown.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panelDropDown.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -311,7 +303,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.PictureBox pictureBox2;

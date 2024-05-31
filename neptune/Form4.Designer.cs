@@ -32,6 +32,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.adminBtn = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.login_pass = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -53,7 +53,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Cyan;
+            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(-3, 1);
             this.panel2.Name = "panel2";
@@ -71,7 +71,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Azure;
+            this.panel1.BackColor = System.Drawing.Color.Cyan;
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label1);
@@ -89,6 +89,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(580, 448);
             this.panel1.TabIndex = 6;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Main Supervisor",
+            "Assistant Supervisor",
+            "Other"});
+            this.comboBox1.Location = new System.Drawing.Point(130, 137);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(336, 24);
+            this.comboBox1.TabIndex = 26;
             // 
             // pictureBox2
             // 
@@ -205,18 +217,6 @@
             this.login_pass.TabIndex = 15;
             this.login_pass.TextChanged += new System.EventHandler(this.sighnup_pass_TextChanged);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Main Supervisor",
-            "Assistant Supervisor",
-            "Other"});
-            this.comboBox1.Location = new System.Drawing.Point(130, 137);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(336, 24);
-            this.comboBox1.TabIndex = 26;
-            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -224,6 +224,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(818, 497);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form4";

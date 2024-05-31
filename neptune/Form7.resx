@@ -118,6 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button13.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        cAAAAHABznhikwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABnSURBVDhPY8AD
+        2IB4DRSD2CQBkIb1aJhoQ1iBGKRhCxCzQ/nrgHgrlI8XwDSDMIgNA7jEMYA6EE8HYmyKQGIgOWUwbxQM
+        YqACxBRFI0gRRQkJBGCKYUkXnU8UoCgzwQBIA4HszMAAAAhBFrjXKFa/AAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEASABIAAD/4gIcSUNDX1BST0ZJTEUAAQEAAAIMbGNtcwIQAABtbnRyUkdCIFhZ
@@ -643,16 +651,16 @@
   </data>
   <data name="button9.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAHzSURBVDhPlZQ7a5VBEIZzJwYOKsRYiYIGGwtNmliJdYIXEGxUxB+hYKU/wJ8gWNgolkpIZdTe
-        xiRoqeD9gpfGG+rzrDNxzsEEsvBkZt+ZffN93+6evhydTidjPwxHvg0+we/gLWyO2jD0R274N1IgDthU
-        GtczbH0wEHNDt1nETXAF9sEYfIE0fA9DYM2esZ61hi5hDzwCFx8AzXsNB2F/zJdgsnpUs53wFHLxNKxl
-        OFW0Z7Br1Ys/5sa7YMNP+Aw7wFEN38EoWPsI9qovhkfzMjkVBRu+wuHQt0PvpmyN2iGwN01Pq7fBZDFE
-        uRiy+n93GbJ+IXS5l+Ju8BUVfaWJVmCQr3lsHOTj8CZqekwqzoYgC9E4FHG9c5g981GTOYX8fnItmupN
-        +QC/wPorWL0pEa9GTc4oHC/CrWjayBPejJqcUPCQfgvhCYxAXj034AbchjtwHfJ2tDsPj8G132HKguJy
-        iHIkFuQrGdrIvNTmINfpMZINl0phBbaE7j8T76+0edR8+vogl9XbYOK3el6KD6AdH2J7fUfmRPvvQ/a/
-        gL/HjWQw4tEo+i2Mr8GDuxdymJ8Hd7v2Hqte1fQs5BHJ6NXSXH6EVnvOVQ+TjGk6Aw+hLqykZs/BnrVd
-        hrXgxz8JHpeX4KuJucfHWm6OP2em5J2+P4WM3X/AZZQ9AAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAfNJREFUOE+V
+        lDtrlUEQhnMnBg4qxFiJggYbC02aWIl1ghcQbFTEH6FgpT/AnyBY2CiWSkhl1N7GJGip4P2Cl8Yb6vOs
+        M3HOwQSy8GRm35l9833f7p6+HJ1OJ2M/DEe+DT7B7+AtbI7aMPRHbvg3UiAO2FQa1zNsfTAQc0O3WcRN
+        cAX2wRh8gTR8D0NgzZ6xnrWGLmEPPAIXHwDNew0HYX/Ml2CyelSznfAUcvE0rGU4VbRnsGvViz/mxrtg
+        w0/4DDvAUQ3fwShY+wj2qi+GR/MyORUFG77C4dC3Q++mbI3aIbA3TU+rt8FkMUS5GLL6f3cZsn4hdLmX
+        4m7wFRV9pYlWYJCveWwc5OPwJmp6TCrOhiAL0TgUcb1zmD3zUZM5hfx+ci2a6k35AL/A+itYvSkRr0ZN
+        zigcL8KtaNrIE96MmpxQ8JB+C+EJjEBePTfgBtyGO3Ad8na0Ow+PwbXfYcqC4nKIciQW5CsZ2si81OYg
+        1+kxkg2XSmEFtoTuPxPvr7R51Hz6+iCX1dtg4rd6XooPoB0fYnt9R+ZE++9D9r+Av8eNZDDi0Sj6LYyv
+        wYO7F3KYnwd3u/Yeq17V9CzkEcno1dJcfoRWe85VD5OMaToDD6EurKRmz8GetV2GteDHPwkel5fgq4m5
+        x8dabo4/Z6bknb4/hYzdf8BllD0AAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -689,14 +697,6 @@
         8c+K47O5/trxpYpYaxL9qk2ywpH5ahVzhPl9K9QoqZYitL4pt/P+uw+VdjwO5/Yx+GU3gnwl4YtrLU9K
         h8J+d/Yeqabqk0GoWHnMzy7LhW3YZm6GvT/h34Bsvhj4Zj0PTbzVNSgWV5muta1CS+uZHc5YtLKxY89u
         grqqfWcqlSStKVx2S2P/2Q==
-</value>
-  </data>
-  <data name="button13.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        cAAAAHABznhikwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABnSURBVDhPY8AD
-        2IB4DRSD2CQBkIb1aJhoQ1iBGKRhCxCzQ/nrgHgrlI8XwDSDMIgNA7jEMYA6EE8HYmyKQGIgOWUwbxQM
-        YqACxBRFI0gRRQkJBGCKYUkXnU8UoCgzwQBIA4HszMAAAAhBFrjXKFa/AAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

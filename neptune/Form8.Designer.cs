@@ -46,9 +46,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -61,6 +61,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -69,6 +70,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -243,6 +245,17 @@
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SeaShell;
+            this.button1.Location = new System.Drawing.Point(3, 189);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(214, 41);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Profolios";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // button9
             // 
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
@@ -255,7 +268,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Cyan;
+            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel2.Controls.Add(this.flowLayoutPanel1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -264,21 +277,10 @@
             this.panel2.Size = new System.Drawing.Size(240, 641);
             this.panel2.TabIndex = 9;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SeaShell;
-            this.button1.Location = new System.Drawing.Point(3, 189);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 41);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Profolios";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Azure;
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.BackColor = System.Drawing.Color.Cyan;
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -294,11 +296,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(428, 103);
+            this.dataGridView1.Location = new System.Drawing.Point(17, 13);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(447, 351);
+            this.dataGridView1.Size = new System.Drawing.Size(443, 313);
             this.dataGridView1.TabIndex = 15;
             // 
             // panel3
@@ -396,6 +398,15 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Aquamarine;
+            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Location = new System.Drawing.Point(412, 103);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(478, 345);
+            this.panel4.TabIndex = 16;
+            // 
             // Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -403,6 +414,10 @@
             this.ClientSize = new System.Drawing.Size(1146, 641);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1164, 688);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1164, 688);
             this.Name = "Form8";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form8";
@@ -416,6 +431,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -453,5 +469,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel4;
     }
 }

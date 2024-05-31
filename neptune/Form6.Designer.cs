@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6));
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
@@ -51,9 +50,9 @@
             this.button8 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button12 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelDropDown.SuspendLayout();
@@ -66,32 +65,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(282, 48);
+            this.label1.Location = new System.Drawing.Point(325, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(252, 20);
             this.label1.TabIndex = 11;
             this.label1.Text = "Temporary Funds Investment";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(732, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 20);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "welcome Admin";
-            // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(676, 48);
+            this.dateTimePicker1.Location = new System.Drawing.Point(15, 49);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 10;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Azure;
+            this.panel1.BackColor = System.Drawing.Color.Cyan;
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.textBox1);
@@ -99,8 +88,6 @@
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(240, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(904, 640);
@@ -109,9 +96,9 @@
             // button9
             // 
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(676, 9);
+            this.button9.Location = new System.Drawing.Point(856, 11);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(50, 31);
+            this.button9.Size = new System.Drawing.Size(38, 32);
             this.button9.TabIndex = 15;
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
@@ -298,22 +285,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(222, 440);
             this.flowLayoutPanel1.TabIndex = 14;
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 15;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Cyan;
-            this.panel2.Controls.Add(this.flowLayoutPanel1);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(240, 641);
-            this.panel2.TabIndex = 5;
-            // 
             // button12
             // 
             this.button12.BackColor = System.Drawing.Color.SeaShell;
@@ -325,6 +296,23 @@
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click_1);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 15;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.Controls.Add(this.flowLayoutPanel1);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(240, 641);
+            this.panel2.TabIndex = 5;
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -332,6 +320,10 @@
             this.ClientSize = new System.Drawing.Size(1146, 641);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1164, 688);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1164, 688);
             this.Name = "Form6";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form6";
@@ -349,7 +341,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
