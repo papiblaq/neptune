@@ -7,21 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace neptune
 {
     public partial class Form2 : Form
     {
+
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hp\source\repos\neptune\neptune\Database1.mdf;Integrated Security=True");
         private bool isCollapsed;
         public Form2()
         {
             InitializeComponent();
+            displayPotfolioData();
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -173,6 +180,116 @@ namespace neptune
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        public void displayPotfolioData()
+        {
+            conn.Open();
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM portfolios";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+
+            conn.Close();
+
+
+
+        }
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            fillcomboboxPortfolios();
+        }
+
+        private void displayDatagrid()
+        {
+            SqlCommand quer2 = new SqlCommand("SELECT Id, portfolio_ID, portfolio_CD, portfolio_DESC, ownership_REF, revolving_FG, currency_ID, currency_CD, effective_DATE, expiry_DATE, REC_ST, portfolio_AMMOUNT FROM portfolios WHERE ownership_REF LIKE '" + comboBox2.Text + "'", conn);
+            SqlDataAdapter da2 = new SqlDataAdapter();
+            DataTable dt2 = new DataTable();
+            da2.SelectCommand = quer2;
+            dt2.Clear();
+            da2.Fill(dt2);
+            dataGridView1.DataSource = dt2;
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            displayDatagrid();
+        }
+        private void textboxValue()
+        {
+            conn.Open();
+
+            string query = "SELECT * FROM portfolios WHERE portfolio_CD = '" + textBox1.Text + "'";
+
+            SqlDataAdapter da = new SqlDataAdapter(query, conn);
+            SqlCommandBuilder builder = new SqlCommandBuilder(da);
+            var ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+
+
+
+            conn.Close();
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        public void fillcomboboxPortfolios()
+        {
+            try
+            {
+                conn.Open();
+
+                // Create a new SqlCommand
+                using (SqlCommand command = new SqlCommand("SELECT ownership_REF FROM portfolios", conn))
+                {
+                    // Execute the SqlCommand and retrieve the data
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        // Clear the ComboBox
+                        comboBox2.Items.Clear();
+
+                        // Create a list to store the values
+                        List<string> values = new List<string>();
+
+                        // Loop through the data
+                        while (reader.Read())
+                        {
+                            // Add each value to the list
+                            values.Add(reader[0].ToString());
+                        }
+
+                        // Remove duplicates from the list
+                        List<string> distinctValues = values.Distinct().ToList();
+
+                        // Add each unique value to the ComboBox
+                        foreach (string value in distinctValues)
+                        {
+                            comboBox2.Items.Add(value);
+                        }
+                    }
+                }
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            textboxValue();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            displayPotfolioData();
         }
     }
     

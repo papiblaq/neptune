@@ -43,68 +43,68 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button9 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panelDropDown.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel11.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel9.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -204,7 +204,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(214, 39);
             this.button11.TabIndex = 9;
-            this.button11.Text = "manage accounts";
+            this.button11.Text = "manage portfolios";
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
@@ -261,6 +261,13 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(15, 41);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 10;
+            // 
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.Transparent;
@@ -287,6 +294,35 @@
             this.panel1.Size = new System.Drawing.Size(928, 640);
             this.panel1.TabIndex = 4;
             // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Aquamarine;
+            this.panel12.Controls.Add(this.dataGridView1);
+            this.panel12.Location = new System.Drawing.Point(40, 436);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(865, 165);
+            this.panel12.TabIndex = 29;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(859, 159);
+            this.dataGridView1.TabIndex = 19;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.LightCyan;
+            this.panel11.Controls.Add(this.button10);
+            this.panel11.Controls.Add(this.button5);
+            this.panel11.Location = new System.Drawing.Point(40, 361);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(861, 59);
+            this.panel11.TabIndex = 28;
+            // 
             // button10
             // 
             this.button10.BackColor = System.Drawing.Color.SeaShell;
@@ -309,91 +345,16 @@
             this.button5.Text = "Transaction Slip Generation";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // panel8
+            // panel10
             // 
-            this.panel8.BackColor = System.Drawing.Color.SeaShell;
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.label14);
-            this.panel8.Controls.Add(this.pictureBox8);
-            this.panel8.Controls.Add(this.label8);
-            this.panel8.Location = new System.Drawing.Point(586, 15);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(249, 100);
-            this.panel8.TabIndex = 23;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(100, 48);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(133, 32);
-            this.label14.TabIndex = 23;
-            this.label14.Text = "1000000";
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(13, 36);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(81, 57);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox8.TabIndex = 21;
-            this.pictureBox8.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(10, 6);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(122, 16);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Profolios At Risk";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Snow;
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.label13);
-            this.panel7.Controls.Add(this.pictureBox7);
-            this.panel7.Controls.Add(this.label7);
-            this.panel7.Location = new System.Drawing.Point(300, 14);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(249, 100);
-            this.panel7.TabIndex = 23;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(137, 48);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(48, 32);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "37";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(20, 36);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(76, 55);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox7.TabIndex = 21;
-            this.pictureBox7.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 6);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(159, 16);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Loan Distributment list";
+            this.panel10.BackColor = System.Drawing.Color.LightCyan;
+            this.panel10.Controls.Add(this.panel6);
+            this.panel10.Controls.Add(this.panel7);
+            this.panel10.Controls.Add(this.panel8);
+            this.panel10.Location = new System.Drawing.Point(36, 211);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(865, 134);
+            this.panel10.TabIndex = 27;
             // 
             // panel6
             // 
@@ -438,91 +399,102 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Loan Repayment Rate";
             // 
-            // panel5
+            // panel7
             // 
-            this.panel5.BackColor = System.Drawing.Color.Linen;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label11);
-            this.panel5.Controls.Add(this.pictureBox5);
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(580, 22);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(249, 103);
-            this.panel5.TabIndex = 23;
+            this.panel7.BackColor = System.Drawing.Color.Snow;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.label13);
+            this.panel7.Controls.Add(this.pictureBox7);
+            this.panel7.Controls.Add(this.label7);
+            this.panel7.Location = new System.Drawing.Point(300, 14);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(249, 100);
+            this.panel7.TabIndex = 23;
             // 
-            // label11
+            // label13
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(100, 47);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(133, 32);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "1000000";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(137, 48);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(48, 32);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "37";
             // 
-            // pictureBox5
+            // pictureBox7
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(15, 22);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(79, 67);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 21;
-            this.pictureBox5.TabStop = false;
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(20, 36);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(76, 55);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox7.TabIndex = 21;
+            this.pictureBox7.TabStop = false;
             // 
-            // label4
+            // label7
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 3);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(196, 16);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Income Generated In Intrest";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(12, 6);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(159, 16);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Loan Distributment list";
             // 
-            // panel4
+            // panel8
             // 
-            this.panel4.BackColor = System.Drawing.Color.Honeydew;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.pictureBox4);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(301, 22);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(249, 103);
-            this.panel4.TabIndex = 23;
+            this.panel8.BackColor = System.Drawing.Color.SeaShell;
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.label14);
+            this.panel8.Controls.Add(this.pictureBox8);
+            this.panel8.Controls.Add(this.label8);
+            this.panel8.Location = new System.Drawing.Point(586, 15);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(249, 100);
+            this.panel8.TabIndex = 23;
             // 
-            // label10
+            // label14
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(92, 47);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(133, 32);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "1000000";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(100, 48);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(133, 32);
+            this.label14.TabIndex = 23;
+            this.label14.Text = "1000000";
             // 
-            // pictureBox4
+            // pictureBox8
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(7, 22);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(83, 78);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 21;
-            this.pictureBox4.TabStop = false;
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(13, 36);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(81, 57);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox8.TabIndex = 21;
+            this.pictureBox8.TabStop = false;
             // 
-            // label3
+            // label8
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Fund Investment";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(10, 6);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(122, 16);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Profolios At Risk";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.GhostWhite;
+            this.panel9.Controls.Add(this.panel3);
+            this.panel9.Controls.Add(this.panel4);
+            this.panel9.Controls.Add(this.panel5);
+            this.panel9.Location = new System.Drawing.Point(36, 60);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(865, 145);
+            this.panel9.TabIndex = 26;
             // 
             // panel3
             // 
@@ -568,15 +540,91 @@
             this.label2.Text = "Bank Balance";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // dataGridView1
+            // panel4
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(859, 159);
-            this.dataGridView1.TabIndex = 19;
+            this.panel4.BackColor = System.Drawing.Color.Honeydew;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.pictureBox4);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Location = new System.Drawing.Point(301, 22);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(249, 103);
+            this.panel4.TabIndex = 23;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(92, 47);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(133, 32);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "1000000";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(7, 22);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(83, 78);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 21;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 16);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Fund Investment";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Linen;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.label11);
+            this.panel5.Controls.Add(this.pictureBox5);
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Location = new System.Drawing.Point(580, 22);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(249, 103);
+            this.panel5.TabIndex = 23;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(100, 47);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(133, 32);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "1000000";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(15, 22);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(79, 67);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 21;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(10, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(196, 16);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Income Generated In Intrest";
             // 
             // pictureBox2
             // 
@@ -598,13 +646,6 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "fund supervision details";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(15, 41);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 10;
-            // 
             // timer1
             // 
             this.timer1.Interval = 15;
@@ -614,47 +655,6 @@
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.GhostWhite;
-            this.panel9.Controls.Add(this.panel3);
-            this.panel9.Controls.Add(this.panel4);
-            this.panel9.Controls.Add(this.panel5);
-            this.panel9.Location = new System.Drawing.Point(36, 60);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(865, 145);
-            this.panel9.TabIndex = 26;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.LightCyan;
-            this.panel10.Controls.Add(this.panel6);
-            this.panel10.Controls.Add(this.panel7);
-            this.panel10.Controls.Add(this.panel8);
-            this.panel10.Location = new System.Drawing.Point(36, 211);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(865, 134);
-            this.panel10.TabIndex = 27;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.LightCyan;
-            this.panel11.Controls.Add(this.button10);
-            this.panel11.Controls.Add(this.button5);
-            this.panel11.Location = new System.Drawing.Point(40, 361);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(861, 59);
-            this.panel11.TabIndex = 28;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.Aquamarine;
-            this.panel12.Controls.Add(this.dataGridView1);
-            this.panel12.Location = new System.Drawing.Point(40, 436);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(865, 165);
-            this.panel12.TabIndex = 29;
             // 
             // Form5
             // 
@@ -676,31 +676,31 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.panel9.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
-            this.panel9.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

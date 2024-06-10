@@ -217,7 +217,7 @@
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(214, 39);
             this.button14.TabIndex = 9;
-            this.button14.Text = "manage accounts";
+            this.button14.Text = "manage portfolios";
             this.button14.UseVisualStyleBackColor = false;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 

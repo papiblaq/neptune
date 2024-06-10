@@ -2,21 +2,47 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace neptune
 {
     public partial class Form9 : Form
     {
 
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hp\source\repos\neptune\neptune\Database1.mdf;Integrated Security=True");
+
         private bool isCollapsed;
         public Form9()
         {
             InitializeComponent();
+            displayViewData();
+        }
+
+        public void displayViewData()
+        {
+            conn.Open();
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM portfolio_content";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+
+            conn.Close();
+
+
+
         }
         //checked
         private void button2_Click_1(object sender, EventArgs e)
@@ -114,6 +140,108 @@ namespace neptune
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Form9_Load(object sender, EventArgs e)
+        {
+            fillcombobox();
+            
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        public void fillcombobox()
+        {
+            try
+            {
+                conn.Open();
+
+                // Create a new SqlCommand
+                using (SqlCommand command = new SqlCommand("SELECT branch_DETAILS FROM portfolio_content", conn))
+                {
+                    // Execute the SqlCommand and retrieve the data
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        // Clear the ComboBox
+                        comboBox2.Items.Clear();
+
+                        // Create a list to store the values
+                        List<string> values = new List<string>();
+
+                        // Loop through the data
+                        while (reader.Read())
+                        {
+                            // Add each value to the list
+                            values.Add(reader[0].ToString());
+                        }
+
+                        // Remove duplicates from the list
+                        List<string> distinctValues = values.Distinct().ToList();
+
+                        // Add each unique value to the ComboBox
+                        foreach (string value in distinctValues)
+                        {
+                            comboBox2.Items.Add(value);
+                        }
+                    }
+                }
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }  
+        }
+
+
+        private void displayDatagrid()
+        {
+            SqlCommand quer2 = new SqlCommand("SELECT Id, portfolio_ID, portfolio_CD, portfolio_DESC, account_ID, account_NAME, account_NUMBER, customer_ID, RSN_ID, bank_officer_ID, appl_ID, currency_ID, BU_ID, distributement_LIMIT, maturity_DATE, REC_ST, risk_class_ID, status_effective_DATE, cleared_BAL, DR_INT_accured, DR_INT_perDay, DR_INT_accrued_PDT, PR_INT_accrued_YTD, PR_INT_accrued_LTD, delinquent_DATE, branch_DETAILS FROM portfolio_content WHERE portfolio_CD LIKE '"+ textBox1.Text+"' AND branch_DETAILS LIKE '" + comboBox2.Text +"'", conn);
+            SqlDataAdapter da2 = new SqlDataAdapter();   
+            DataTable dt2 = new DataTable();
+            da2.SelectCommand = quer2;
+            dt2.Clear();
+            da2.Fill(dt2);
+            dataGridView1.DataSource = dt2;
+        }
+
+
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            displayDatagrid();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textboxValue();
+        }
+        private void textboxValue()
+        {
+            conn.Open();
+
+            string query = "SELECT * FROM portfolio_content WHERE portfolio_CD = '"+ textBox1.Text+"'";
+
+            SqlDataAdapter da = new SqlDataAdapter(query, conn);
+            SqlCommandBuilder builder = new SqlCommandBuilder(da);
+            var ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+
+
+
+            conn.Close();
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            displayViewData();
         }
     }
 }
