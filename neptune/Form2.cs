@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Oracle.ManagedDataAccess.Client;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -15,20 +16,16 @@ namespace neptune
 {
     public partial class Form2 : Form
     {
-
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\hp\source\repos\neptune\neptune\Database1.mdf;Integrated Security=True");
+        private string connectionString = "Data Source=OFFICE_DB;Persist Security Info=True;User ID=fortunelive;Password=fortunelive";
         private bool isCollapsed;
+
         public Form2()
         {
             InitializeComponent();
             displayPotfolioData();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e) { }
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -37,22 +34,16 @@ namespace neptune
             this.Hide();
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
+        private void panel3_Paint(object sender, PaintEventArgs e) { }
 
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void button2_Click(object sender, EventArgs e) { }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(isCollapsed)
+            if (isCollapsed)
             {
                 panelDropDown.Height += 10;
-                if(panelDropDown.Size == panelDropDown.MaximumSize) 
+                if (panelDropDown.Size == panelDropDown.MaximumSize)
                 {
                     timer1.Stop();
                     isCollapsed = false;
@@ -61,7 +52,7 @@ namespace neptune
             else
             {
                 panelDropDown.Height -= 10;
-                if(panelDropDown.Size == panelDropDown.MinimumSize)
+                if (panelDropDown.Size == panelDropDown.MinimumSize)
                 {
                     timer1.Stop();
                     isCollapsed = true;
@@ -81,10 +72,7 @@ namespace neptune
             this.Hide();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        private void panel1_Paint(object sender, PaintEventArgs e) { }
 
         private void button8_Click(object sender, EventArgs e)
         {
@@ -109,28 +97,18 @@ namespace neptune
 
         private void button9_Click(object sender, EventArgs e)
         {
-            DialogResult check = MessageBox.Show("are you shure you wamt to logout?", "comfirmation message ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(check == DialogResult.Yes)
+            DialogResult check = MessageBox.Show("Are you sure you want to logout?", "Confirmation message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (check == DialogResult.Yes)
             {
                 Application.Exit();
             }
-            
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
+        private void textBox2_TextChanged(object sender, EventArgs e) { }
 
-        }
+        private void textBox3_TextChanged(object sender, EventArgs e) { }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void textBox4_TextChanged(object sender, EventArgs e) { }
 
         private void button12_Click(object sender, EventArgs e)
         {
@@ -146,15 +124,9 @@ namespace neptune
             this.Hide();
         }
 
-        private void button7_Click_1(object sender, EventArgs e)
-        {
+        private void button7_Click_1(object sender, EventArgs e) { }
 
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void button4_Click(object sender, EventArgs e) { }
 
         private void button4_Click_1(object sender, EventArgs e)
         {
@@ -177,104 +149,143 @@ namespace neptune
             this.Hide();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
-        }
         public void displayPotfolioData()
         {
-            conn.Open();
+            using (OracleConnection conn = new OracleConnection(connectionString))
+            {
+                conn.Open();
 
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM portfolios";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
+                string query = "SELECT * FROM portfolios";
+                OracleDataAdapter da = new OracleDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
 
-            conn.Close();
-
-
-
+                conn.Close();
+            }
         }
+
         private void Form2_Load(object sender, EventArgs e)
         {
             fillcomboboxPortfolios();
         }
 
+
         private void displayDatagrid()
         {
-            SqlCommand quer2 = new SqlCommand("SELECT Id, portfolio_ID, portfolio_CD, portfolio_DESC, ownership_REF, revolving_FG, currency_ID, currency_CD, effective_DATE, expiry_DATE, REC_ST, portfolio_AMMOUNT FROM portfolios WHERE ownership_REF LIKE '" + comboBox2.Text + "'", conn);
-            SqlDataAdapter da2 = new SqlDataAdapter();
-            DataTable dt2 = new DataTable();
-            da2.SelectCommand = quer2;
-            dt2.Clear();
-            da2.Fill(dt2);
-            dataGridView1.DataSource = dt2;
+            // Get the selected item from the ComboBox
+            string selectedObject = comboBox2.SelectedItem.ToString();
+
+            // Query the database using the selected item
+            string query = "SELECT * FROM portfolios WHERE  ownership_REF LIKE '" + comboBox2.Text + "'";
+
+            using (OracleConnection conn = new OracleConnection(connectionString))
+            {
+                conn.Open();
+
+                using (OracleCommand cmd = new OracleCommand(query, conn))
+                {
+                    // Add parameter for the selected object
+                    cmd.Parameters.Add(new OracleParameter("ownership_REF", selectedObject));
+
+                    using (OracleDataAdapter da = new OracleDataAdapter(cmd))
+                    {
+                        // Fill data into DataTable
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        // Bind DataTable to DataGridView
+                        dataGridView1.DataSource = dt;
+                    }
+                }
+            }
         }
+
+
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             displayDatagrid();
         }
+
         private void textboxValue()
         {
-            conn.Open();
+            using (OracleConnection conn = new OracleConnection(connectionString))
+            {
+                conn.Open();
 
-            string query = "SELECT * FROM portfolios WHERE portfolio_CD = '" + textBox1.Text + "'";
-
-            SqlDataAdapter da = new SqlDataAdapter(query, conn);
-            SqlCommandBuilder builder = new SqlCommandBuilder(da);
-            var ds = new DataSet();
-            da.Fill(ds);
-            dataGridView1.DataSource = ds.Tables[0];
+                string query = "SELECT * FROM portfolios WHERE portfolio_CD = '" + textBox1.Text + "'";
+                using (OracleCommand cmd = new OracleCommand(query, conn))
+                {
 
 
+                    // Add the parameter to the command
+                    cmd.Parameters.Add(new OracleParameter("portfolio_CD", textBox1.Text));
 
-            conn.Close();
+                    // Create a new OracleDataAdapter to retrieve the data
+                    using (OracleDataAdapter adapter = new OracleDataAdapter(cmd))
+                    {
+                        // Create a new DataTable to hold the data
+                        DataTable dataTable = new DataTable();
+
+                        // Fill the DataTable with the data retrieved by the adapter
+                        adapter.Fill(dataTable);
+
+                        // Bind the DataTable to the DataGridView to display the data
+                        dataGridView1.DataSource = dataTable;
+                    }
+                }
+                conn.Close();
+            }
+
+                
+            
         }
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
-        }
+        private void textBox1_TextChanged(object sender, EventArgs e) { }
+
         public void fillcomboboxPortfolios()
         {
             try
             {
-                conn.Open();
-
-                // Create a new SqlCommand
-                using (SqlCommand command = new SqlCommand("SELECT ownership_REF FROM portfolios", conn))
+                using (OracleConnection conn = new OracleConnection(connectionString))
                 {
-                    // Execute the SqlCommand and retrieve the data
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    conn.Open();
+
+                    // Create a new OracleCommand
+                    using (OracleCommand cmd = new OracleCommand("SELECT ownership_REF FROM portfolios", conn))
                     {
-                        // Clear the ComboBox
-                        comboBox2.Items.Clear();
-
-                        // Create a list to store the values
-                        List<string> values = new List<string>();
-
-                        // Loop through the data
-                        while (reader.Read())
+                        // Execute the OracleCommand and retrieve the data
+                        using (OracleDataReader reader = cmd.ExecuteReader())
                         {
-                            // Add each value to the list
-                            values.Add(reader[0].ToString());
-                        }
+                            // Clear the ComboBox
+                            comboBox2.Items.Clear();
 
-                        // Remove duplicates from the list
-                        List<string> distinctValues = values.Distinct().ToList();
+                            // Create a list to store the values
+                            List<string> values = new List<string>();
 
-                        // Add each unique value to the ComboBox
-                        foreach (string value in distinctValues)
-                        {
-                            comboBox2.Items.Add(value);
+                            // Loop through the data
+                            while (reader.Read())
+                            {
+                                // Add each value to the list
+                                values.Add(reader[0].ToString());
+                            }
+
+                            // Remove duplicates from the list
+                            List<string> distinctValues = values.Distinct().ToList();
+
+                            // Add each unique value to the ComboBox
+                            foreach (string value in distinctValues)
+                            {
+                                comboBox2.Items.Add(value);
+                            }
                         }
                     }
+
+                    conn.Close();
                 }
-                conn.Close();
             }
             catch (Exception ex)
             {
@@ -292,5 +303,4 @@ namespace neptune
             displayPotfolioData();
         }
     }
-    
 }

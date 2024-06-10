@@ -39,9 +39,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelDropDown = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -142,58 +140,32 @@
             this.flowLayoutPanel1.Controls.Add(this.button1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 100);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(222, 421);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(222, 397);
             this.flowLayoutPanel1.TabIndex = 14;
             // 
             // panelDropDown
             // 
-            this.panelDropDown.Controls.Add(this.button10);
             this.panelDropDown.Controls.Add(this.button11);
-            this.panelDropDown.Controls.Add(this.button12);
             this.panelDropDown.Controls.Add(this.button2);
             this.panelDropDown.Controls.Add(this.button14);
             this.panelDropDown.Location = new System.Drawing.Point(3, 3);
-            this.panelDropDown.MaximumSize = new System.Drawing.Size(214, 197);
+            this.panelDropDown.MaximumSize = new System.Drawing.Size(214, 121);
             this.panelDropDown.MinimumSize = new System.Drawing.Size(214, 39);
             this.panelDropDown.Name = "panelDropDown";
             this.panelDropDown.Size = new System.Drawing.Size(214, 39);
             this.panelDropDown.TabIndex = 18;
             // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.Silver;
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.Location = new System.Drawing.Point(0, 154);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(214, 41);
-            this.button10.TabIndex = 13;
-            this.button10.Text = "delete account";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.Silver;
             this.button11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button11.Location = new System.Drawing.Point(0, 113);
+            this.button11.Location = new System.Drawing.Point(0, 76);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(214, 41);
             this.button11.TabIndex = 12;
             this.button11.Text = "Update Existing Accounts";
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.Silver;
-            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button12.Location = new System.Drawing.Point(0, 76);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(214, 37);
-            this.button12.TabIndex = 11;
-            this.button12.Text = "create account";
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button2
             // 
@@ -203,7 +175,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(214, 37);
             this.button2.TabIndex = 10;
-            this.button2.Text = "View account";
+            this.button2.Text = "View portfolio account";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
@@ -430,9 +402,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelDropDown;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button1;
