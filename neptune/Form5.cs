@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,9 @@ namespace neptune
 {
     public partial class Form5 : Form
     {
+
+        private string connectionString = "Data Source=OFFICE_DB;Persist Security Info=True;User ID=fortunelive;Password=fortunelive";
+
         private bool isCollapsed;
         public Form5()
         {
@@ -134,6 +138,177 @@ namespace neptune
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+        private void DisplaySumTotal()
+        {
+            try
+            {
+                // Create a new OracleConnection
+                using (OracleConnection conn = new OracleConnection(connectionString))
+                {
+                    // Open the connection
+                    conn.Open();
+
+                    // Define your query to calculate the sum of the column
+                    string query = "SELECT SUM(PORTFOLIO_AMMOUNT) FROM portfolios";
+
+                    // Create an OracleCommand
+                    using (OracleCommand cmd = new OracleCommand(query, conn))
+                    {
+                        // Execute the query and get the result
+                        object result = cmd.ExecuteScalar();
+
+                        // Check if the result is not null and display it in the label
+                        if (result != DBNull.Value)
+                        {
+                            label9.Text = "KESH " + result.ToString();
+                        }
+                        else
+                        {
+                            label9.Text = " KESH 0";
+                        }
+                    }
+
+                    // Close the connection
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any errors that might have occurred
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void DisplayDistributementLimit()
+        {
+            try
+            {
+                // Create a new OracleConnection
+                using (OracleConnection conn = new OracleConnection(connectionString))
+                {
+                    // Open the connection
+                    conn.Open();
+
+                    // Define your query to calculate the sum of the column
+                    string query = "SELECT SUM(DISTRIBUTEMENT_LIMIT) FROM portfolio_contents";
+
+                    // Create an OracleCommand
+                    using (OracleCommand cmd = new OracleCommand(query, conn))
+                    {
+                        // Execute the query and get the result
+                        object result = cmd.ExecuteScalar();
+
+                        // Check if the result is not null and display it in the label
+                        if (result != DBNull.Value)
+                        {
+                            label10.Text = "KESH " + result.ToString();
+                        }
+                        else
+                        {
+                            label10.Text = " KESH 0";
+                        }
+                    }
+
+                    // Close the connection
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any errors that might have occurred
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void DisplayLoanRspayment()
+        {
+            try
+            {
+                // Create a new OracleConnection
+                using (OracleConnection conn = new OracleConnection(connectionString))
+                {
+                    // Open the connection
+                    conn.Open();
+
+                    // Define your query to calculate the sum of the column
+                    string query = "SELECT SUM(CLEARED_BAL) FROM portfolio_contents";
+
+                    // Create an OracleCommand
+                    using (OracleCommand cmd = new OracleCommand(query, conn))
+                    {
+                        // Execute the query and get the result
+                        object result = cmd.ExecuteScalar();
+
+                        // Check if the result is not null and display it in the label
+                        if (result != DBNull.Value)
+                        {
+                            label13.Text = "KESH " + result.ToString();
+                        }
+                        else
+                        {
+                            label13.Text = " KESH 0";
+                        }
+                    }
+
+                    // Close the connection
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any errors that might have occurred
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void DisplayLoanIntrest()
+        {
+            try
+            {
+                // Create a new OracleConnection
+                using (OracleConnection conn = new OracleConnection(connectionString))
+                {
+                    // Open the connection
+                    conn.Open();
+
+                    // Define your query to calculate the sum of the column
+                    string query = "SELECT SUM(PR_INT_ACCURED_LTD) FROM portfolio_contents";
+
+                    // Create an OracleCommand
+                    using (OracleCommand cmd = new OracleCommand(query, conn))
+                    {
+                        // Execute the query and get the result
+                        object result = cmd.ExecuteScalar();
+
+                        // Check if the result is not null and display it in the label
+                        if (result != DBNull.Value)
+                        {
+                            label11.Text = "KESH " + result.ToString();
+                        }
+                        else
+                        {
+                            label11.Text = " KESH 0";
+                        }
+                    }
+
+                    // Close the connection
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any errors that might have occurred
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+            DisplaySumTotal();
+            DisplayDistributementLimit();
+            DisplayLoanRspayment();
+            DisplayLoanIntrest();
         }
     }
 }

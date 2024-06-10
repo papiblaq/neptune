@@ -47,7 +47,6 @@
             this.button9 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel11 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -87,7 +86,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -297,21 +295,13 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.Aquamarine;
-            this.panel12.Controls.Add(this.dataGridView1);
+            this.panel12.Controls.Add(this.panel3);
+            this.panel12.Controls.Add(this.label2);
+            this.panel12.Controls.Add(this.panel8);
             this.panel12.Location = new System.Drawing.Point(40, 436);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(865, 165);
             this.panel12.TabIndex = 29;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(859, 159);
-            this.dataGridView1.TabIndex = 19;
             // 
             // panel11
             // 
@@ -350,7 +340,6 @@
             this.panel10.BackColor = System.Drawing.Color.LightCyan;
             this.panel10.Controls.Add(this.panel6);
             this.panel10.Controls.Add(this.panel7);
-            this.panel10.Controls.Add(this.panel8);
             this.panel10.Location = new System.Drawing.Point(36, 211);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(865, 134);
@@ -363,9 +352,9 @@
             this.panel6.Controls.Add(this.label12);
             this.panel6.Controls.Add(this.pictureBox6);
             this.panel6.Controls.Add(this.label6);
-            this.panel6.Location = new System.Drawing.Point(17, 14);
+            this.panel6.Location = new System.Drawing.Point(653, 14);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(249, 100);
+            this.panel6.Size = new System.Drawing.Size(189, 100);
             this.panel6.TabIndex = 23;
             // 
             // label12
@@ -406,16 +395,16 @@
             this.panel7.Controls.Add(this.label13);
             this.panel7.Controls.Add(this.pictureBox7);
             this.panel7.Controls.Add(this.label7);
-            this.panel7.Location = new System.Drawing.Point(300, 14);
+            this.panel7.Location = new System.Drawing.Point(25, 14);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(249, 100);
+            this.panel7.Size = new System.Drawing.Size(613, 100);
             this.panel7.TabIndex = 23;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(137, 48);
+            this.label13.Location = new System.Drawing.Point(206, 48);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(48, 32);
             this.label13.TabIndex = 23;
@@ -438,9 +427,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(12, 6);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(159, 16);
+            this.label7.Size = new System.Drawing.Size(180, 16);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Loan Distributment list";
+            this.label7.Text = "Ammount of Loan Repaid";
             // 
             // panel8
             // 
@@ -449,9 +438,9 @@
             this.panel8.Controls.Add(this.label14);
             this.panel8.Controls.Add(this.pictureBox8);
             this.panel8.Controls.Add(this.label8);
-            this.panel8.Location = new System.Drawing.Point(586, 15);
+            this.panel8.Location = new System.Drawing.Point(669, 35);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(249, 100);
+            this.panel8.Size = new System.Drawing.Size(169, 100);
             this.panel8.TabIndex = 23;
             // 
             // label14
@@ -460,9 +449,9 @@
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(100, 48);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(133, 32);
+            this.label14.Size = new System.Drawing.Size(65, 32);
             this.label14.TabIndex = 23;
-            this.label14.Text = "1000000";
+            this.label14.Text = "100";
             // 
             // pictureBox8
             // 
@@ -488,7 +477,6 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.GhostWhite;
-            this.panel9.Controls.Add(this.panel3);
             this.panel9.Controls.Add(this.panel4);
             this.panel9.Controls.Add(this.panel5);
             this.panel9.Location = new System.Drawing.Point(36, 60);
@@ -502,19 +490,18 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(17, 22);
+            this.panel3.Location = new System.Drawing.Point(21, 35);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(249, 103);
+            this.panel3.Size = new System.Drawing.Size(626, 103);
             this.panel3.TabIndex = 20;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(95, 47);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(122, 41);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(133, 32);
+            this.label9.Size = new System.Drawing.Size(96, 25);
             this.label9.TabIndex = 22;
             this.label9.Text = "1000000";
             // 
@@ -533,7 +520,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 3);
+            this.label2.Location = new System.Drawing.Point(320, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 16);
             this.label2.TabIndex = 0;
@@ -547,18 +534,18 @@
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.pictureBox4);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(301, 22);
+            this.panel4.Location = new System.Drawing.Point(20, 22);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(249, 103);
+            this.panel4.Size = new System.Drawing.Size(407, 103);
             this.panel4.TabIndex = 23;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(92, 47);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(129, 47);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(133, 32);
+            this.label10.Size = new System.Drawing.Size(96, 25);
             this.label10.TabIndex = 23;
             this.label10.Text = "1000000";
             // 
@@ -590,18 +577,18 @@
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.pictureBox5);
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(580, 22);
+            this.panel5.Location = new System.Drawing.Point(444, 22);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(249, 103);
+            this.panel5.Size = new System.Drawing.Size(385, 103);
             this.panel5.TabIndex = 23;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(100, 47);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(122, 47);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(133, 32);
+            this.label11.Size = new System.Drawing.Size(96, 25);
             this.label11.TabIndex = 23;
             this.label11.Text = "1000000";
             // 
@@ -670,6 +657,7 @@
             this.Name = "Form5";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fundSupervision";
+            this.Load += new System.EventHandler(this.Form5_Load);
             this.panel2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panelDropDown.ResumeLayout(false);
@@ -677,7 +665,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel12.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -719,7 +707,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
