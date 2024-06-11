@@ -28,7 +28,7 @@ namespace neptune
             {
                 conn.Open();
 
-                string query = "SELECT * FROM portfolio_contents";
+                string query = "SELECT * FROM   AVAILABLE_ACCOUNTS_DETAILS";
                 OracleDataAdapter da = new OracleDataAdapter(query, conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -153,7 +153,7 @@ namespace neptune
                 {
                     conn.Open();
 
-                    using (OracleCommand command = new OracleCommand("SELECT DISTINCT branch_DETAILS FROM portfolio_content", conn))
+                    using (OracleCommand command = new OracleCommand("SELECT DISTINCT branch_DETAILS FROM AVAILABLE_ACCOUNTS_DETAILS", conn))
                     {
                         using (OracleDataReader reader = command.ExecuteReader())
                         {
@@ -181,7 +181,7 @@ namespace neptune
             {
                 conn.Open();
 
-                string query = "SELECT Id, portfolio_ID, portfolio_CD, portfolio_DESC, account_ID, account_NAME, account_NUMBER, customer_ID, RSN_ID, bank_officer_ID, appl_ID, currency_ID, BU_ID, distributement_LIMIT, maturity_DATE, REC_ST, risk_class_ID, status_effective_DATE, cleared_BAL, DR_INT_accured, DR_INT_perDay, DR_INT_accrued_PDT, PR_INT_accrued_YTD, PR_INT_accrued_LTD, delinquent_DATE, branch_DETAILS FROM portfolio_content WHERE portfolio_CD LIKE :portfolio_CD AND branch_DETAILS LIKE :branch_DETAILS";
+                string query = "SELECT * FROM view_portfolio_contents WHERE PORTFOLIO_CD LIKE :portfolio_CD AND branch_DETAILS LIKE :branch_DETAILS";
 
                 using (OracleCommand cmd = new OracleCommand(query, conn))
                 {
@@ -214,7 +214,7 @@ namespace neptune
             {
                 conn.Open();
 
-                string query = "SELECT * FROM portfolio_contents WHERE portfolio_CD = '" + textBox1.Text + "'";
+                string query = "SELECT * FROM view_portfolio_contents WHERE PORTFOLIO_CD = '" + textBox1.Text + "'";
                 using (OracleCommand cmd = new OracleCommand(query, conn))
                 {
 
@@ -247,6 +247,20 @@ namespace neptune
         private void button3_Click(object sender, EventArgs e)
         {
             displayViewData();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            DialogResult check = MessageBox.Show("Are you sure you want to logout?", "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (check == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

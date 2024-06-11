@@ -258,12 +258,14 @@
             // 
             // button9
             // 
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
+            this.button9.BackColor = System.Drawing.Color.Transparent;
+            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button9.Location = new System.Drawing.Point(694, 10);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(50, 37);
             this.button9.TabIndex = 12;
-            this.button9.UseVisualStyleBackColor = true;
+            this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // panel2
@@ -290,7 +292,7 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(240, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(906, 641);
+            this.panel1.Size = new System.Drawing.Size(1203, 641);
             this.panel1.TabIndex = 10;
             // 
             // panel4
@@ -411,13 +413,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1146, 641);
+            this.ClientSize = new System.Drawing.Size(1442, 641);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1164, 688);
+            this.MaximumSize = new System.Drawing.Size(1460, 688);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1164, 688);
+            this.MinimumSize = new System.Drawing.Size(1460, 688);
             this.Name = "Form8";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form8";

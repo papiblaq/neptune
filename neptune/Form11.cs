@@ -110,5 +110,14 @@ namespace neptune
                 }
             }
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            DialogResult check = MessageBox.Show("are you shure you waNt to logout?", "comfirmation message ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (check == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

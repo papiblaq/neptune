@@ -121,5 +121,14 @@ namespace neptune
         {
             timer1.Start();
         }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            DialogResult check = MessageBox.Show("are you shure you want to logout?", "comfirmation message ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (check == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

@@ -1,16 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using Oracle.ManagedDataAccess.Client;
-using static System.ComponentModel.Design.ObjectSelectorEditor;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace neptune
 {
@@ -157,7 +150,7 @@ namespace neptune
             {
                 conn.Open();
 
-                string query = "SELECT * FROM portfolios";
+                string query = "SELECT * FROM CREDITPRO_PORTFOLIO_RISK_PRODBRS";
                 OracleDataAdapter da = new OracleDataAdapter(query, conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -172,14 +165,22 @@ namespace neptune
             fillcomboboxPortfolios();
         }
 
-
         private void displayDatagrid()
         {
             // Get the selected item from the ComboBox
-            string selectedObject = comboBox2.SelectedItem.ToString();
+            string selectedObject = comboBox2.SelectedItem?.ToString();
+            string portfolioCode = textBox1.Text;
 
-            // Query the database using the selected item
-            string query = "SELECT * FROM portfolios WHERE  ownership_REF LIKE '" + comboBox2.Text + "'";
+            // Build the query with parameters
+            string query = "SELECT * FROM CREDITPRO_PORTFOLIO_RISK_PRODBRS WHERE 1=1";
+            if (!string.IsNullOrEmpty(selectedObject))
+            {
+                query += " AND BU_NM = :BU_NM";
+            }
+            if (!string.IsNullOrEmpty(portfolioCode))
+            {
+                query += " AND PORTFOLIO_CD = :PORTFOLIO_CD";
+            }
 
             using (OracleConnection conn = new OracleConnection(connectionString))
             {
@@ -187,8 +188,15 @@ namespace neptune
 
                 using (OracleCommand cmd = new OracleCommand(query, conn))
                 {
-                    // Add parameter for the selected object
-                    cmd.Parameters.Add(new OracleParameter("ownership_REF", selectedObject));
+                    // Add parameters if they are not null or empty
+                    if (!string.IsNullOrEmpty(selectedObject))
+                    {
+                        cmd.Parameters.Add(new OracleParameter("BU_NM", selectedObject));
+                    }
+                    if (!string.IsNullOrEmpty(portfolioCode))
+                    {
+                        cmd.Parameters.Add(new OracleParameter("PORTFOLIO_CD", portfolioCode));
+                    }
 
                     using (OracleDataAdapter da = new OracleDataAdapter(cmd))
                     {
@@ -200,51 +208,15 @@ namespace neptune
                         dataGridView1.DataSource = dt;
                     }
                 }
+
+                conn.Close();
             }
         }
-
-
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             displayDatagrid();
         }
-
-        private void textboxValue()
-        {
-            using (OracleConnection conn = new OracleConnection(connectionString))
-            {
-                conn.Open();
-
-                string query = "SELECT * FROM portfolios WHERE portfolio_CD = '" + textBox1.Text + "'";
-                using (OracleCommand cmd = new OracleCommand(query, conn))
-                {
-
-
-                    // Add the parameter to the command
-                    cmd.Parameters.Add(new OracleParameter("portfolio_CD", textBox1.Text));
-
-                    // Create a new OracleDataAdapter to retrieve the data
-                    using (OracleDataAdapter adapter = new OracleDataAdapter(cmd))
-                    {
-                        // Create a new DataTable to hold the data
-                        DataTable dataTable = new DataTable();
-
-                        // Fill the DataTable with the data retrieved by the adapter
-                        adapter.Fill(dataTable);
-
-                        // Bind the DataTable to the DataGridView to display the data
-                        dataGridView1.DataSource = dataTable;
-                    }
-                }
-                conn.Close();
-            }
-
-                
-            
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e) { }
 
         public void fillcomboboxPortfolios()
         {
@@ -255,7 +227,7 @@ namespace neptune
                     conn.Open();
 
                     // Create a new OracleCommand
-                    using (OracleCommand cmd = new OracleCommand("SELECT ownership_REF FROM portfolios", conn))
+                    using (OracleCommand cmd = new OracleCommand("SELECT DISTINCT BU_NM FROM CREDITPRO_PORTFOLIO_RISK_PRODBRS", conn))
                     {
                         // Execute the OracleCommand and retrieve the data
                         using (OracleDataReader reader = cmd.ExecuteReader())
@@ -263,23 +235,10 @@ namespace neptune
                             // Clear the ComboBox
                             comboBox2.Items.Clear();
 
-                            // Create a list to store the values
-                            List<string> values = new List<string>();
-
-                            // Loop through the data
+                            // Loop through the data and add each unique value to the ComboBox
                             while (reader.Read())
                             {
-                                // Add each value to the list
-                                values.Add(reader[0].ToString());
-                            }
-
-                            // Remove duplicates from the list
-                            List<string> distinctValues = values.Distinct().ToList();
-
-                            // Add each unique value to the ComboBox
-                            foreach (string value in distinctValues)
-                            {
-                                comboBox2.Items.Add(value);
+                                comboBox2.Items.Add(reader["BU_NM"].ToString());
                             }
                         }
                     }
@@ -293,14 +252,33 @@ namespace neptune
             }
         }
 
+        private void textboxValue()
+        {
+            displayDatagrid();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            displayDatagrid();
+        }
+
         private void button11_Click(object sender, EventArgs e)
         {
-            textboxValue();
+            displayDatagrid();
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
             displayPotfolioData();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            DialogResult check = MessageBox.Show("Are you sure you want to logout?", "Confirmation message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (check == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace neptune
 {
-    
+
 
     public partial class Form3 : Form
     {
@@ -16,6 +16,10 @@ namespace neptune
         {
             InitializeComponent();
 
+            progressBar1.Visible = false;
+            label4.Visible = true;
+            login_register.Visible = true;
+            label1.Visible = false;
         }
 
         private void login_register_Click(object sender, EventArgs e)
@@ -24,6 +28,10 @@ namespace neptune
             form4.Show();
             this.Hide();
         }
+
+
+
+
 
         private void login_btn_Click(object sender, EventArgs e)
         {
@@ -51,7 +59,17 @@ namespace neptune
 
                             if (table.Rows.Count >= 1)
                             {
+
+
+                                timer1.Start();
+
                                 MessageBox.Show("You are logged in");
+
+
+
+                                
+
+
 
                                 Form2 form2 = new Form2();
                                 form2.Show();
@@ -88,6 +106,39 @@ namespace neptune
         }
 
         private void login_password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            progressBar1.Visible = true;
+            label4.Visible = false;
+            login_register.Visible = false;
+            label1.Visible = true;
+
+            if (progressBar1.Value < 100)
+            {
+                progressBar1.Value += 1;
+            }
+
+            else
+            {
+                timer1.Stop();
+            }
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
