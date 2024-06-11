@@ -35,7 +35,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.adminBtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.signup_username = new System.Windows.Forms.TextBox();
             this.signup_loginhere = new System.Windows.Forms.Label();
@@ -75,7 +74,6 @@
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.adminBtn);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.signup_username);
             this.panel1.Controls.Add(this.signup_loginhere);
@@ -121,16 +119,6 @@
             this.label1.Size = new System.Drawing.Size(74, 20);
             this.label1.TabIndex = 25;
             this.label1.Text = "register";
-            // 
-            // adminBtn
-            // 
-            this.adminBtn.Location = new System.Drawing.Point(496, 405);
-            this.adminBtn.Name = "adminBtn";
-            this.adminBtn.Size = new System.Drawing.Size(68, 32);
-            this.adminBtn.TabIndex = 24;
-            this.adminBtn.Text = "ADMIN PRIVILAGES DO NOT PRESS";
-            this.adminBtn.UseVisualStyleBackColor = true;
-            this.adminBtn.Click += new System.EventHandler(this.adminBtn_Click);
             // 
             // label7
             // 
@@ -246,7 +234,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button adminBtn;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox signup_username;
         private System.Windows.Forms.Label signup_loginhere;
